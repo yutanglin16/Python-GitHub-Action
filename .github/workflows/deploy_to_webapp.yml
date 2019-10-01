@@ -26,8 +26,8 @@ jobs:
     # Finally, deploy the app to App Service (https://github.com/Azure/webapps-deploy)
     - uses: azure/webapps-deploy@v1
       with:
-        app-name: pythonignite2019
-        publish-profile: ${{ secrets.PUBLISH_PROFILE }}
+        app-name: pythonignite2019mysql
+        publish-profile: ${{ secrets.PUBLISH_PROFILE_FOR_MYSQL_APP }}
 
         # Startup script: 
         # apt-get install -y gcc && pip3 install -r requirements.txt && gunicorn --bind=0.0.0.0 --timeout 600 mydjangoproject.wsgi
